@@ -14,6 +14,11 @@
 		0A1EA9682A49661900856789 /* photoSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1EA9672A49661900856789 /* photoSnapshotTests.swift */; };
 		0A1EA9722A49661900856789 /* photoSnapshotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1EA9712A49661900856789 /* photoSnapshotUITests.swift */; };
 		0A1EA9742A49661900856789 /* photoSnapshotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1EA9732A49661900856789 /* photoSnapshotUITestsLaunchTests.swift */; };
+		0A1EA9812A49698100856789 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1EA9802A49698100856789 /* Photo.swift */; };
+		0A1EA9832A49731100856789 /* TAEBAEK milkyway.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1EA9822A49731100856789 /* TAEBAEK milkyway.otf */; };
+		0A1EA9872A4977F400856789 /* PhotoSnapshotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1EA9862A4977F400856789 /* PhotoSnapshotViewModel.swift */; };
+		0A1EA98A2A49786500856789 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1EA9892A49786500856789 /* ImagePicker.swift */; };
+		0A1EA98F2A4988A300856789 /* PhotoSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1EA98E2A4988A300856789 /* PhotoSettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,12 @@
 		0A1EA96D2A49661900856789 /* photoSnapshotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = photoSnapshotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A1EA9712A49661900856789 /* photoSnapshotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoSnapshotUITests.swift; sourceTree = "<group>"; };
 		0A1EA9732A49661900856789 /* photoSnapshotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoSnapshotUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0A1EA9802A49698100856789 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		0A1EA9822A49731100856789 /* TAEBAEK milkyway.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TAEBAEK milkyway.otf"; sourceTree = "<group>"; };
+		0A1EA9852A4973A400856789 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0A1EA9862A4977F400856789 /* PhotoSnapshotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSnapshotViewModel.swift; sourceTree = "<group>"; };
+		0A1EA9892A49786500856789 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		0A1EA98E2A4988A300856789 /* PhotoSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +105,13 @@
 		0A1EA9552A49661700856789 /* photoSnapshot */ = {
 			isa = PBXGroup;
 			children = (
+				0A1EA98D2A49889000856789 /* ViewModel */,
+				0A1EA98C2A49888800856789 /* Model */,
+				0A1EA98B2A49886D00856789 /* View */,
+				0A1EA9882A49785600856789 /* UIImage */,
+				0A1EA9852A4973A400856789 /* Info.plist */,
+				0A1EA9842A49731C00856789 /* font */,
 				0A1EA9562A49661700856789 /* photoSnapshotApp.swift */,
-				0A1EA9582A49661700856789 /* ContentView.swift */,
 				0A1EA95A2A49661900856789 /* Assets.xcassets */,
 				0A1EA95C2A49661900856789 /* Preview Content */,
 			);
@@ -125,6 +141,47 @@
 				0A1EA9732A49661900856789 /* photoSnapshotUITestsLaunchTests.swift */,
 			);
 			path = photoSnapshotUITests;
+			sourceTree = "<group>";
+		};
+		0A1EA9842A49731C00856789 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				0A1EA9822A49731100856789 /* TAEBAEK milkyway.otf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+		0A1EA9882A49785600856789 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				0A1EA9892A49786500856789 /* ImagePicker.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		0A1EA98B2A49886D00856789 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0A1EA9582A49661700856789 /* ContentView.swift */,
+				0A1EA98E2A4988A300856789 /* PhotoSettingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0A1EA98C2A49888800856789 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A1EA9802A49698100856789 /* Photo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0A1EA98D2A49889000856789 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0A1EA9862A4977F400856789 /* PhotoSnapshotViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +290,7 @@
 			files = (
 				0A1EA95E2A49661900856789 /* Preview Assets.xcassets in Resources */,
 				0A1EA95B2A49661900856789 /* Assets.xcassets in Resources */,
+				0A1EA9832A49731100856789 /* TAEBAEK milkyway.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +315,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A1EA9812A49698100856789 /* Photo.swift in Sources */,
+				0A1EA9872A4977F400856789 /* PhotoSnapshotViewModel.swift in Sources */,
+				0A1EA98A2A49786500856789 /* ImagePicker.swift in Sources */,
 				0A1EA9592A49661700856789 /* ContentView.swift in Sources */,
+				0A1EA98F2A4988A300856789 /* PhotoSettingView.swift in Sources */,
 				0A1EA9572A49661700856789 /* photoSnapshotApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +482,7 @@
 				DEVELOPMENT_TEAM = 4JR7PKLFY2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = photoSnapshot/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +512,7 @@
 				DEVELOPMENT_TEAM = 4JR7PKLFY2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = photoSnapshot/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
