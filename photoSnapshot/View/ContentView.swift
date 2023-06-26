@@ -12,6 +12,7 @@ struct ContentView: View {
     @State var photos = [Photo]()
     @State var selectedImage: UIImage?
     @State var isShowingImagePicker = false
+    @State var isShowingPhotoView = false
     
     @State private var selectedTab = 0
     
@@ -30,20 +31,14 @@ struct ContentView: View {
                 .fill(Color("BG"))
                 .ignoresSafeArea()
         }
-        .sheet(isPresented: $isShowingImagePicker) {
-            let configuration = PHPickerConfiguration(photoLibrary: PHPhotoLibrary.shared())
-            ImagePicker(configuration: configuration, selectedImage: $selectedImage, isShowingImagePicker: $isShowingImagePicker)
-        }
-        .onChange(of: isShowingImagePicker) { newValue in
-            if !newValue {
-                
+        .onChange(of: selectedImage, perform: { _ in
+            isShowingPhotoView = true
+        })
+        .fullScreenCover(isPresented: $isShowingPhotoView, content: {
+            if let image = selectedImage {
+                PhotoSettingView(selectedImage: image)
             }
-        }
-//        .onChange(of: selectedImage) { newValue in
-//            if let image = selectedImage {
-//                photos.append(Photo(image: image, title: "title!"))
-//            }
-//        }
+        })
     }
     
     @ViewBuilder
@@ -53,13 +48,17 @@ struct ContentView: View {
             
             ZStack {
                 Button {
-                    isShowingImagePicker.toggle()
+                    isShowingImagePicker = true
                 } label: {
                     VStack(spacing: 10) {
                         Image(systemName: "plus")
                             .foregroundColor(.white)
                             .font(.system(size: 31))
                     }
+                }
+                .sheet(isPresented: $isShowingImagePicker) {
+                    let configuration = PHPickerConfiguration(photoLibrary: PHPhotoLibrary.shared())
+                    ImagePicker(configuration: configuration, selectedImage: $selectedImage, isShowingImagePicker: $isShowingImagePicker)
                 }
             }
             .frame(width: size.width, height: size.height, alignment: .center)

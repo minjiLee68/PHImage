@@ -9,13 +9,19 @@ import SwiftUI
 import PhotosUI
 
 struct PhotoSettingView: View {
+    @Environment(\.dismiss) private var dismiss
     @State var title = ""
-    
-    @Binding var selectedImage: UIImage
+    @State var selectedImage: UIImage
     
     var body: some View {
-        VStack {
-            geometryView()
+        ZStack {
+            VStack(spacing: 0) {
+                naviButtonView()
+                
+                photoView()
+                
+                titleView()
+            }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background {
@@ -26,7 +32,32 @@ struct PhotoSettingView: View {
     }
     
     @ViewBuilder
-    func geometryView() -> some View {
+    func naviButtonView() -> some View {
+        HStack(spacing: 0) {
+            Button {
+                dismiss()
+            } label: {
+                Image(systemName: "chevron.backward")
+                    .foregroundColor(.white.opacity(0.4))
+                    .font(.system(size: 21))
+            }
+            
+            Spacer()
+            
+            Button {
+                
+            } label: {
+                Image(systemName: "square.and.arrow.down")
+                    .foregroundColor(.white.opacity(0.4))
+                    .font(.system(size: 21))
+            }
+        }
+        .padding(.horizontal, 20)
+        .padding(.top, 10)
+    }
+    
+    @ViewBuilder
+    func photoView() -> some View {
         GeometryReader { proxy in
             let size = proxy.size
             
@@ -35,24 +66,30 @@ struct PhotoSettingView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: size.width, height: size.height)
-                
-                VStack(spacing: 10) {
-                    Text(title)
-                        .font(.caption)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white.opacity(0.6))
-                }
             }
             .frame(width: size.width, height: size.height, alignment: .center)
             .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
         }
-        .padding(.vertical, 30)
+        .padding(.vertical, 40)
         .padding(.horizontal, 40)
+    }
+    
+    @ViewBuilder
+    func titleView() -> some View {
+        TextField("사진의 제목을 지어주세요", text: $title)
+            .padding()
+            .foregroundColor(.white.opacity(0.6))
+            .overlay {
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(.white.opacity(0.4), lineWidth: 1)
+            }
+            .padding(.vertical, 40)
+            .padding(.horizontal, 40)
     }
 }
 
 struct PhotoSettingView_Previews: PreviewProvider {
     static var previews: some View {
-        PhotoSettingView(selectedImage: .constant(UIImage()))
+        PhotoSettingView(selectedImage: UIImage())
     }
 }
