@@ -18,9 +18,9 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("SnapBook")
+            Text("SnapShot")
                 .foregroundColor(.white)
-                .font(.custom("TAEBAEK milkyway", size: 32))
+                .font(.custom(Font.fontName, size: 32))
                 .padding(.top, 25)
             
             parallaxCards()
@@ -36,7 +36,7 @@ struct ContentView: View {
         })
         .fullScreenCover(isPresented: $isShowingPhotoView, content: {
             if let image = selectedImage {
-                PhotoSettingView(selectedImage: image)
+                PhotoSettingView(selectedImage: image, isShowingPhotoView: $isShowingPhotoView)
             }
         })
     }
@@ -57,8 +57,7 @@ struct ContentView: View {
                     }
                 }
                 .sheet(isPresented: $isShowingImagePicker) {
-                    let configuration = PHPickerConfiguration(photoLibrary: PHPhotoLibrary.shared())
-                    ImagePicker(configuration: configuration, selectedImage: $selectedImage, isShowingImagePicker: $isShowingImagePicker)
+                    ImagePicker(selectedImage: $selectedImage, isShowingImagePicker: $isShowingImagePicker)
                 }
             }
             .frame(width: size.width, height: size.height, alignment: .center)

@@ -9,9 +9,9 @@ import SwiftUI
 import PhotosUI
 
 struct PhotoSettingView: View {
-    @Environment(\.dismiss) private var dismiss
     @State var title = ""
     @State var selectedImage: UIImage
+    @Binding var isShowingPhotoView: Bool
     
     var body: some View {
         ZStack {
@@ -35,7 +35,7 @@ struct PhotoSettingView: View {
     func naviButtonView() -> some View {
         HStack(spacing: 0) {
             Button {
-                dismiss()
+                isShowingPhotoView = false
             } label: {
                 Image(systemName: "chevron.backward")
                     .foregroundColor(.white.opacity(0.4))
@@ -66,6 +66,10 @@ struct PhotoSettingView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: size.width, height: size.height)
+                
+//                Text(title)
+//                    .font(.custom(Font.fontName, size: 18))
+//                    .foregroundColor(.white.opacity(0.8))
             }
             .frame(width: size.width, height: size.height, alignment: .center)
             .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
@@ -90,6 +94,6 @@ struct PhotoSettingView: View {
 
 struct PhotoSettingView_Previews: PreviewProvider {
     static var previews: some View {
-        PhotoSettingView(selectedImage: UIImage())
+        PhotoSettingView(selectedImage: UIImage(), isShowingPhotoView: .constant(false))
     }
 }

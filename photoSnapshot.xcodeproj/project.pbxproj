@@ -19,6 +19,15 @@
 		0A1EA9872A4977F400856789 /* PhotoSnapshotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1EA9862A4977F400856789 /* PhotoSnapshotViewModel.swift */; };
 		0A1EA98A2A49786500856789 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1EA9892A49786500856789 /* ImagePicker.swift */; };
 		0A1EA98F2A4988A300856789 /* PhotoSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1EA98E2A4988A300856789 /* PhotoSettingView.swift */; };
+		0A1EA9912A4AA6AD00856789 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1EA9902A4AA6AD00856789 /* Font.swift */; };
+		0A1EA9932A4AAB7700856789 /* EF_jejudoldam.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1EA9922A4AAB7700856789 /* EF_jejudoldam.otf */; };
+		0A1EA9962A4AB3DA00856789 /* CombineFirebase in Frameworks */ = {isa = PBXBuildFile; productRef = 0A1EA9952A4AB3DA00856789 /* CombineFirebase */; };
+		0A1EA9982A4AB3DA00856789 /* CombineFirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0A1EA9972A4AB3DA00856789 /* CombineFirebaseFirestore */; };
+		0A1EA99A2A4AB3DA00856789 /* CombineFirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0A1EA9992A4AB3DA00856789 /* CombineFirebaseStorage */; };
+		0A1EA99D2A4AB40200856789 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 0A1EA99C2A4AB40200856789 /* FirebaseDatabase */; };
+		0A1EA99F2A4AB40200856789 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0A1EA99E2A4AB40200856789 /* FirebaseFirestoreSwift */; };
+		0A1EA9A12A4AB40200856789 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0A1EA9A02A4AB40200856789 /* FirebaseStorage */; };
+		0ACDD5E72A4AB72E009CB4AA /* GoogleService-Info (2).plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ACDD5E62A4AB72E009CB4AA /* GoogleService-Info (2).plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +64,9 @@
 		0A1EA9862A4977F400856789 /* PhotoSnapshotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSnapshotViewModel.swift; sourceTree = "<group>"; };
 		0A1EA9892A49786500856789 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		0A1EA98E2A4988A300856789 /* PhotoSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSettingView.swift; sourceTree = "<group>"; };
+		0A1EA9902A4AA6AD00856789 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		0A1EA9922A4AAB7700856789 /* EF_jejudoldam.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EF_jejudoldam.otf; sourceTree = "<group>"; };
+		0ACDD5E62A4AB72E009CB4AA /* GoogleService-Info (2).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (2).plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A1EA99F2A4AB40200856789 /* FirebaseFirestoreSwift in Frameworks */,
+				0A1EA9962A4AB3DA00856789 /* CombineFirebase in Frameworks */,
+				0A1EA99A2A4AB3DA00856789 /* CombineFirebaseStorage in Frameworks */,
+				0A1EA99D2A4AB40200856789 /* FirebaseDatabase in Frameworks */,
+				0A1EA9982A4AB3DA00856789 /* CombineFirebaseFirestore in Frameworks */,
+				0A1EA9A12A4AB40200856789 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +103,7 @@
 		0A1EA94A2A49661700856789 = {
 			isa = PBXGroup;
 			children = (
+				0ACDD5E62A4AB72E009CB4AA /* GoogleService-Info (2).plist */,
 				0A1EA9552A49661700856789 /* photoSnapshot */,
 				0A1EA9662A49661900856789 /* photoSnapshotTests */,
 				0A1EA9702A49661900856789 /* photoSnapshotUITests */,
@@ -146,7 +165,9 @@
 		0A1EA9842A49731C00856789 /* font */ = {
 			isa = PBXGroup;
 			children = (
+				0A1EA9922A4AAB7700856789 /* EF_jejudoldam.otf */,
 				0A1EA9822A49731100856789 /* TAEBAEK milkyway.otf */,
+				0A1EA9902A4AA6AD00856789 /* Font.swift */,
 			);
 			path = font;
 			sourceTree = "<group>";
@@ -200,6 +221,14 @@
 			dependencies = (
 			);
 			name = photoSnapshot;
+			packageProductDependencies = (
+				0A1EA9952A4AB3DA00856789 /* CombineFirebase */,
+				0A1EA9972A4AB3DA00856789 /* CombineFirebaseFirestore */,
+				0A1EA9992A4AB3DA00856789 /* CombineFirebaseStorage */,
+				0A1EA99C2A4AB40200856789 /* FirebaseDatabase */,
+				0A1EA99E2A4AB40200856789 /* FirebaseFirestoreSwift */,
+				0A1EA9A02A4AB40200856789 /* FirebaseStorage */,
+			);
 			productName = photoSnapshot;
 			productReference = 0A1EA9532A49661700856789 /* photoSnapshot.app */;
 			productType = "com.apple.product-type.application";
@@ -272,6 +301,10 @@
 				Base,
 			);
 			mainGroup = 0A1EA94A2A49661700856789;
+			packageReferences = (
+				0A1EA9942A4AB3DA00856789 /* XCRemoteSwiftPackageReference "CombineFirebase" */,
+				0A1EA99B2A4AB40200856789 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 0A1EA9542A49661700856789 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -290,6 +323,8 @@
 			files = (
 				0A1EA95E2A49661900856789 /* Preview Assets.xcassets in Resources */,
 				0A1EA95B2A49661900856789 /* Assets.xcassets in Resources */,
+				0A1EA9932A4AAB7700856789 /* EF_jejudoldam.otf in Resources */,
+				0ACDD5E72A4AB72E009CB4AA /* GoogleService-Info (2).plist in Resources */,
 				0A1EA9832A49731100856789 /* TAEBAEK milkyway.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +352,7 @@
 			files = (
 				0A1EA9812A49698100856789 /* Photo.swift in Sources */,
 				0A1EA9872A4977F400856789 /* PhotoSnapshotViewModel.swift in Sources */,
+				0A1EA9912A4AA6AD00856789 /* Font.swift in Sources */,
 				0A1EA98A2A49786500856789 /* ImagePicker.swift in Sources */,
 				0A1EA9592A49661700856789 /* ContentView.swift in Sources */,
 				0A1EA98F2A4988A300856789 /* PhotoSettingView.swift in Sources */,
@@ -647,6 +683,58 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0A1EA9942A4AB3DA00856789 /* XCRemoteSwiftPackageReference "CombineFirebase" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rever-ai/CombineFirebase";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.3;
+			};
+		};
+		0A1EA99B2A4AB40200856789 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0A1EA9952A4AB3DA00856789 /* CombineFirebase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A1EA9942A4AB3DA00856789 /* XCRemoteSwiftPackageReference "CombineFirebase" */;
+			productName = CombineFirebase;
+		};
+		0A1EA9972A4AB3DA00856789 /* CombineFirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A1EA9942A4AB3DA00856789 /* XCRemoteSwiftPackageReference "CombineFirebase" */;
+			productName = CombineFirebaseFirestore;
+		};
+		0A1EA9992A4AB3DA00856789 /* CombineFirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A1EA9942A4AB3DA00856789 /* XCRemoteSwiftPackageReference "CombineFirebase" */;
+			productName = CombineFirebaseStorage;
+		};
+		0A1EA99C2A4AB40200856789 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A1EA99B2A4AB40200856789 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		0A1EA99E2A4AB40200856789 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A1EA99B2A4AB40200856789 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		0A1EA9A02A4AB40200856789 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A1EA99B2A4AB40200856789 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0A1EA94B2A49661700856789 /* Project object */;
 }
